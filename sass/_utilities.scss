@@ -33,3 +33,11 @@ body {
     border-radius: 10px;
   }
 }
+
+@keyframes pop-text {
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+

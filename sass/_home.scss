@@ -2,6 +2,50 @@
 .home {
   .showcase {
     height: 30em;
+    display: grid;
+    align-content: center;
+    text: {
+      align: center;
+      transform: uppercase;
+    }
+    padding: 10px;
+    background: $secondary-color;
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    h2 {
+      text-transform: initial;
+    }
   }
+  
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    justify-content: center;
+    grid-gap: 2em;
+    padding: .5em;
+    text-align: center;
+    
+    & > h1 {
+      padding: 3em 0;
+      grid-column: 1 / -1;
+    }
+    
+    section {
+      margin: 2em auto;
+      
+      .img {
+        padding: 3em .5em;
+        background-color: $secondary-color;
+        border-radius: 10px;
+        font-size: 2em;
+        
+        .pop-text {
+          display: block;
+        }
+      }
+    }
+  }
+  
 }
 

@@ -22,9 +22,57 @@ body {
     border-radius: 10px;
   }
 }
+@keyframes pop-text {
+  50% {
+    transform: scale(1.5);
+  }
+}
 /* line 3, ../sass/_home.scss */
 .home .showcase {
   height: 30em;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  background: #ddd;
+}
+/* line 14, ../sass/_home.scss */
+.home .showcase h1 {
+  margin-bottom: 20px;
+}
+/* line 17, ../sass/_home.scss */
+.home .showcase h2 {
+  text-transform: initial;
+}
+/* line 22, ../sass/_home.scss */
+.home .content {
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  justify-content: center;
+  grid-gap: 2em;
+  padding: .5em;
+  text-align: center;
+}
+/* line 29, ../sass/_home.scss */
+.home .content > h1 {
+  padding: 3em 0;
+  grid-column: 1 / -1;
+}
+/* line 34, ../sass/_home.scss */
+.home .content section {
+  margin: 2em auto;
+}
+/* line 37, ../sass/_home.scss */
+.home .content section .img {
+  padding: 3em .5em;
+  background-color: #ddd;
+  border-radius: 10px;
+  font-size: 2em;
+}
+
+/* line 5, ../sass/screen.scss */
+body {
+  user-select: none;
 }
 
 /* line 13, ../sass/screen.scss */
@@ -45,9 +93,9 @@ body {
   justify-content: space-between;
   padding: .3em .8em;
   background: #fff;
-  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
 }
 /* line 34, ../sass/screen.scss */
 .top-bar .button {
@@ -56,10 +104,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  position: relative;
   transition: .5s;
 }
-/* line 44, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .top-bar .button .bar {
   padding: 2px;
   background: #3f3f3f;
@@ -68,6 +115,10 @@ body {
   border-radius: 5px;
 }
 
+/* line 53, ../sass/screen.scss */
+.button {
+  position: relative;
+}
 /* line 56, ../sass/screen.scss */
 .button::before {
   content: '';
@@ -86,4 +137,26 @@ body {
 .button:active::before {
   animation: ripple .2s ease-in;
   animation-fill-mode: forwards;
+}
+
+/* line 76, ../sass/screen.scss */
+.pop-text {
+  display: inline-block;
+  -moz-box-animation: pop-text 1s infinite;
+  -webkit-animation: pop-text 1s infinite;
+  animation: pop-text 1s infinite;
+}
+
+/* line 81, ../sass/screen.scss */
+.content {
+  display: grid;
+}
+
+/* line 85, ../sass/screen.scss */
+.footer {
+  height: 30vh;
+  background: #ddd;
+  display: grid;
+  align-items: center;
+  text-align: center;
 }

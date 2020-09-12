@@ -3,7 +3,7 @@
 @import "home";
 
 body {
-  
+  user-select: none;
 }
 
 main {
@@ -27,7 +27,7 @@ main {
   padding: .3em .8em;
   background: $primary-color;
   @include box-shadow(
-    "1px 2px 3px rgba(0, 0, 0, .3),
+    "1px 2px 3px rgba(0, 0, 0, .3), \a
     -1px 0 2px rgba(0, 0, 0, .3)"
   );
   
@@ -37,7 +37,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    position: relative;
     // cursor: pointer;
     transition: .5s;
     
@@ -49,10 +48,11 @@ main {
       border-radius: 5px;
     }
   }
-  
 }
 
 .button {
+  position: relative;
+  
   &::before {
     content: '';
     position: absolute;
@@ -73,6 +73,19 @@ main {
   }
 }
 
+.pop-text {
+  display: inline-block;
+  @include animation(pop-text 1s infinite);
+}
 
+.content {
+  display: grid;
+}
 
-
+.footer {
+  height: 30vh;
+  background: $secondary-color;
+  display: grid;
+  align-items: center;
+  text-align: center
+}
