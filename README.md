@@ -6,9 +6,9 @@ This project is a compilation of several modified articles about EcmaScript from
 ## Table of Content
 
 1. EcmaScript 2015
-2. EcmaScript 2016
-3. EcmaScript 2017
-4. EcmaScript 2018
-5. EcmaScript 2019
-6. EcmaScript 2020
-7. EcmaScript Next
+1. EcmaScript 2016
+1. EcmaScript 2017
+1. EcmaScript 2018
+1. EcmaScript 2019
+1. EcmaScript 2020
+1. EcmaScript Next
