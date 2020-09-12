@@ -5,3 +5,74 @@
 body {
   
 }
+
+main {
+  
+}
+
+.sidebar {
+  display: none
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .3em .8em;
+  background: $primary-color;
+  @include box-shadow(
+    "1px 2px 3px rgba(0, 0, 0, .3),
+    -1px 0 2px rgba(0, 0, 0, .3)"
+  );
+  
+  .button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    // cursor: pointer;
+    transition: .5s;
+    
+    .bar {
+      padding: 2px;
+      background: #3f3f3f;
+      width: 85%;
+      margin: 2px auto;
+      border-radius: 5px;
+    }
+  }
+  
+}
+
+.button {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 30%;
+    height: 30%;
+    transform: translate(50%, -50%);
+    background: radial-gradient(rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .1) 70%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+  }
+  
+  &:active::before {
+    animation: ripple .2s ease-in;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+
+

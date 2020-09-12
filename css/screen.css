@@ -1,15 +1,89 @@
-/* line 1, ../sass/_utilities.scss */
+/* line 2, ../sass/_utilities.scss */
 * {
   box-sizing: border-box;
-}
-
-/* line 5, ../sass/_utilities.scss */
-body {
   margin: 0;
   padding: 0;
 }
 
-/* line 2, ../sass/_home.scss */
-.showcase {
-  height: 70vh;
+/* line 8, ../sass/_utilities.scss */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes ripple {
+  99% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+/* line 3, ../sass/_home.scss */
+.home .showcase {
+  height: 30em;
+}
+
+/* line 13, ../sass/screen.scss */
+.sidebar {
+  display: none;
+}
+
+/* line 17, ../sass/screen.scss */
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .3em .8em;
+  background: #fff;
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
+}
+/* line 34, ../sass/screen.scss */
+.top-bar .button {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  position: relative;
+  transition: .5s;
+}
+/* line 44, ../sass/screen.scss */
+.top-bar .button .bar {
+  padding: 2px;
+  background: #3f3f3f;
+  width: 85%;
+  margin: 2px auto;
+  border-radius: 5px;
+}
+
+/* line 56, ../sass/screen.scss */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 30%;
+  height: 30%;
+  transform: translate(50%, -50%);
+  background: radial-gradient(rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.1) 70%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+}
+/* line 70, ../sass/screen.scss */
+.button:active::before {
+  animation: ripple .2s ease-in;
+  animation-fill-mode: forwards;
 }
