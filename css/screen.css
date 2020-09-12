@@ -1,4 +1,15 @@
-/* line 4, ../sass/screen.scss */
+/* line 1, ../sass/_utilities.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/_utilities.scss */
 body {
-  background: #666;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, ../sass/_home.scss */
+.showcase {
+  height: 70vh;
 }
