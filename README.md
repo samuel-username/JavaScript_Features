@@ -1,7 +1,7 @@
 
 # JavaScript Features
 
-This project is a compilation of several modified articles about EcmaScript from the year 2015 and continuous.
+This project is a compilation and modification of several articles about EcmaScript from the year 2015 and continuous.
 
 ## Table of Content
 
