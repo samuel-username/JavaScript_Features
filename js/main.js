@@ -1,5 +1,6 @@
 
 const root = document.documentElement;
+const body = document.body;
 
 // pop delay
 const popTexts = document.querySelectorAll('.pop-text');
@@ -25,7 +26,7 @@ async function positionRipple(e) {
   
   const pos = getPosition(e.target)
   // console.log(pos)
-  const x = (pos.x + e.clientX) / e.target.clientWidth * 100 + '%'
+  const x = (e.clientX - pos.x) / e.target.clientWidth * 100 + '%'
   const y = (e.clientY - pos.y) / e.target.clientHeight * 100 + '%'
   // console.log(x, y)
   root.style.setProperty('--ripple-left', x)
@@ -35,16 +36,18 @@ async function positionRipple(e) {
     {
       width: '0',
       height: '0',
+      borderRadius: '50%'
     },
     {
       width: '250%',
       height: '250%',
+      borderRadius: 'inherit'
     }
   ];
   
-  ripple.animate(keyframes, {duration: 200})
+  ripple.animate(keyframes, {duration: 300})
   // wait for animation to finish
-  await delay(250)
+  await delay(350)
   ripple.remove()
 }
 
@@ -73,3 +76,18 @@ function getPosition(el) {
     y: yPos
   };
 }
+
+// Handling the form
+const form = document.querySelector('form')
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  console.log('happy')
+})
+
+// Determining page progress
+addEventListener('scroll', (e) => {
+  const progress = root.scrollTop / (body.clientHeight - root.clientHeight) * 100;
+  root.style.setProperty('--page-progress', progress+'%')
+})
+scroll
+

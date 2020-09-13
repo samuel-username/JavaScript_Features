@@ -8,10 +8,16 @@
 :root {
   --ripple-top: 50%;
   --ripple-left: 50%;
+  --page-progress: 0%;
 }
 
 body {
-  
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
 }
 
 @mixin box-shadow($value) {

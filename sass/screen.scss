@@ -4,6 +4,7 @@
 
 body {
   user-select: none;
+  color: $dark;
 }
 
 main {
@@ -26,27 +27,37 @@ main {
   justify-content: space-between;
   padding: .3em .8em;
   background: $primary-color;
-  // width: calc(100% - 4px);
   @include box-shadow(
-    "1px 2px 3px rgba(0, 0, 0, .3), \
-    -1px 0 2px rgba(0, 0, 0, .3)"
+    "1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3)"
   );
   
   .button {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     transition: .5s;
+    border-radius: 50%;
+    padding: 2px;
     
     .bar {
       padding: 2px;
-      background: #3f3f3f;
+      background: $dark;
       width: 85%;
       margin: 2px auto;
       border-radius: 5px;
     }
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, $secondary-color var(--page-progress), transparent var(--page-progress));
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2px;
   }
 }
 
@@ -73,7 +84,7 @@ main {
     top: var(--ripple-top);
     left: var(--ripple-left);
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.08);//radial-gradient(rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .1) 60%);
+    background: rgba(0,0,0,.08);
     width: 0;
     height: 0;
     border-radius: 50%;
@@ -89,11 +100,53 @@ main {
   display: grid;
 }
 
+.subscription {
+  max-width: 50em;
+  padding: 3.2em 20px;
+  margin: 4em auto;
+  background: $secondary-color;
+  border-radius: $border-radius;
+  
+  h1 {
+    padding: 20px;
+  }
+  
+  input {
+    padding: 15px;
+    margin: 15px auto;
+    display: block;
+    border: 0;
+    outline: none;
+    font-size: 1.1em;
+    
+    &[type='email'],
+    &[type='text'] {
+      width: 90%;
+      margin-top: 20px;
+    }
+    
+    &[type='submit'] {
+      width: 5em;
+      border-radius: $border-radius;
+      background: $dark;
+      color: white;
+    }
+  }
+}
+
 .footer {
-  height: 30vh;
+  height: 35vh;
   background: $secondary-color;
   display: grid;
+  grid-template-rows: 80% 20%;
   align-items: center;
   text-align: center;
+  
+  .bottom {
+    background: $dark;
+    color: white;
+    padding: 10px;
+    align-self: end;
+  }
 }
 
