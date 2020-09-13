@@ -6,25 +6,14 @@
 }
 
 /* line 8, ../sass/_utilities.scss */
-body {
-  width: 100vw;
-  height: 100vh;
+:root {
+  --ripple-top: 50%;
+  --ripple-left: 50%;
 }
 
-@keyframes ripple {
-  99% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-}
 @keyframes pop-text {
   50% {
-    transform: scale(1.5);
+    transform: scale(1.4);
   }
 }
 /* line 3, ../sass/_home.scss */
@@ -84,8 +73,8 @@ body {
 .top-bar {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: 5;
   margin: 0 2px;
   display: flex;
@@ -93,11 +82,11 @@ body {
   justify-content: space-between;
   padding: .3em .8em;
   background: #fff;
-  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),  -1px 0 2px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),     -1px 0 2px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),     -1px 0 2px rgba(0, 0, 0, .3);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .3),     -1px 0 2px rgba(0, 0, 0, .3);
 }
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .top-bar .button {
   width: 42px;
   height: 42px;
@@ -117,42 +106,49 @@ body {
 
 /* line 53, ../sass/screen.scss */
 .button {
-  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 56, ../sass/screen.scss */
-.button::before {
+
+/* line 64, ../sass/screen.scss */
+.button {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+/* line 70, ../sass/screen.scss */
+.button .ripple {
   content: '';
   position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 30%;
-  height: 30%;
-  transform: translate(50%, -50%);
-  background: radial-gradient(rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.1) 70%);
+  top: var(--ripple-top);
+  left: var(--ripple-left);
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.08);
   width: 0;
   height: 0;
   border-radius: 50%;
 }
-/* line 70, ../sass/screen.scss */
-.button:active::before {
-  animation: ripple .2s ease-in;
-  animation-fill-mode: forwards;
-}
 
-/* line 76, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
-  -moz-box-animation: pop-text 1s infinite;
-  -webkit-animation: pop-text 1s infinite;
-  animation: pop-text 1s infinite;
+  -webkit-animation: pop-text 1.2s infinite;
+  -moz-animation: pop-text 1.2s infinite;
+  animation: pop-text 1.2s infinite;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .footer {
   height: 30vh;
   background: #ddd;

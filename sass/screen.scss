@@ -17,8 +17,8 @@ main {
 .top-bar {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: 5;
   margin: 0 2px;
   display: flex;
@@ -26,8 +26,9 @@ main {
   justify-content: space-between;
   padding: .3em .8em;
   background: $primary-color;
+  // width: calc(100% - 4px);
   @include box-shadow(
-    "1px 2px 3px rgba(0, 0, 0, .3), \a
+    "1px 2px 3px rgba(0, 0, 0, .3), \
     -1px 0 2px rgba(0, 0, 0, .3)"
   );
   
@@ -37,7 +38,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    // cursor: pointer;
     transition: .5s;
     
     .bar {
@@ -50,32 +50,39 @@ main {
   }
 }
 
+%no-highlights {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .button {
   position: relative;
+  cursor: pointer;
+  @extend %no-highlights;
+  overflow: hidden;
   
-  &::before {
+  .ripple {
     content: '';
     position: absolute;
-    top: 50%;
-    right: 50%;
-    width: 30%;
-    height: 30%;
-    transform: translate(50%, -50%);
-    background: radial-gradient(rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .1) 70%);
+    top: var(--ripple-top);
+    left: var(--ripple-left);
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.08);//radial-gradient(rgba(0, 0, 0, .2) 20%, rgba(0, 0, 0, .1) 60%);
     width: 0;
     height: 0;
     border-radius: 50%;
-  }
-  
-  &:active::before {
-    animation: ripple .2s ease-in;
-    animation-fill-mode: forwards;
   }
 }
 
 .pop-text {
   display: inline-block;
-  @include animation(pop-text 1s infinite);
+  @include animation(pop-text 1.2s infinite);
 }
 
 .content {
@@ -87,5 +94,6 @@ main {
   background: $secondary-color;
   display: grid;
   align-items: center;
-  text-align: center
+  text-align: center;
 }
+

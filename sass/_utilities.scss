@@ -5,38 +5,30 @@
   padding: 0;
 }
 
+:root {
+  --ripple-top: 50%;
+  --ripple-left: 50%;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
+  
 }
 
 @mixin box-shadow($value) {
-  -moz-box-shadow: unquote($value);
   -webkit-box-shadow: unquote($value);
+  -moz-box-shadow: unquote($value);
   box-shadow: unquote($value);
 }
 
 @mixin animation($value) {
-  -moz-box-animation: $value;
   -webkit-animation: $value;
+  -moz-animation: $value;
   animation: $value;
-}
-
-@keyframes ripple {
-  99% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
 }
 
 @keyframes pop-text {
   50% {
-    transform: scale(1.5);
+    transform: scale(1.4);
   }
 }
 
