@@ -7,7 +7,8 @@
     align-content: center;
     height: 30em;
     padding: 10px;
-    background: $secondary-color;
+    background-image: url(images/showcase-img.jpeg);
+    background-size: cover;
     
     h1 {
       text-transform: uppercase;

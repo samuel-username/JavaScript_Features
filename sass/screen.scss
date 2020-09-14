@@ -4,6 +4,7 @@
 
 body {
   user-select: none;
+  background: $primary-color;
   color: $dark;
 }
 
@@ -94,6 +95,7 @@ main {
 .pop-text {
   display: inline-block;
   @include animation(pop-text 1.2s infinite);
+  color: #fff;
 }
 
 .content {
