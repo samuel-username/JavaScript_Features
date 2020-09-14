@@ -1,7 +1,7 @@
 
-# JavaScript Features
+# Modern Vanilla JavaScript
 
-This project is a compilation and modification of several articles about EcmaScript from the year 2015 and continuous.
+Want to learn modern JavaScript? Then this is for you. New features which are annually added to JavaScript since 2015 are elaborated here so that anyone can use and understand them.
 
 ## Table of Content
 
