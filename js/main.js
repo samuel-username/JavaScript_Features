@@ -31,7 +31,6 @@ async function positionRipple(e) {
   ripple.style.left = x;
   ripple.style.top = y;
   
-  
   const keyframes = [
     {
       width: '0',
@@ -90,4 +89,10 @@ addEventListener('scroll', (e) => {
   root.style.setProperty('--page-progress', progress+'%')
 })
 
+// Handling the sidebar
+const toggleSidebar = document.querySelector('.top-bar .button')
+const sidebar = document.querySelector('.sidebar')
+toggleSidebar.addEventListener('click', () => {
+  
+})
 
