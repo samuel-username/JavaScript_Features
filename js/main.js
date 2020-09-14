@@ -25,12 +25,15 @@ async function positionRipple(e) {
   e.target.appendChild(ripple)
   
   const pos = getPosition(e.target)
-  // console.log(pos)
+  console.log(pos)
   const x = (e.clientX - pos.x) / e.target.clientWidth * 100 + '%'
   const y = (e.clientY - pos.y) / e.target.clientHeight * 100 + '%'
   // console.log(x, y)
-  root.style.setProperty('--ripple-left', x)
-  root.style.setProperty('--ripple-top', y)
+  // root.style.setProperty('--ripple-left', x)
+  // root.style.setProperty('--ripple-top', y)
+  ripple.style.left = x;
+  ripple.style.top = y;
+  
   
   const keyframes = [
     {
@@ -89,5 +92,5 @@ addEventListener('scroll', (e) => {
   const progress = root.scrollTop / (body.clientHeight - root.clientHeight) * 100;
   root.style.setProperty('--page-progress', progress+'%')
 })
-scroll
+
 

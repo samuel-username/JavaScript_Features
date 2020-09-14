@@ -1,6 +1,7 @@
 @import "variables";
 @import "utilities";
 @import "home";
+@import "other_pages";
 
 body {
   user-select: none;
@@ -96,6 +97,7 @@ main {
   display: inline-block;
   @include animation(pop-text 1.2s infinite);
   color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
 
 .content {
@@ -103,7 +105,7 @@ main {
 }
 
 .subscription {
-  max-width: 50em;
+  max-width: 40em;
   padding: 3.2em 20px;
   margin: 4em auto;
   background: $secondary-color;
@@ -111,6 +113,10 @@ main {
   
   h1 {
     padding: 20px;
+    
+    .pop-text {
+      padding-right: .5em;
+    }
   }
   
   input {
@@ -137,7 +143,7 @@ main {
 }
 
 .footer {
-  height: 35vh;
+  height: 12em;
   background: $secondary-color;
   display: grid;
   grid-template-rows: 80% 20%;
