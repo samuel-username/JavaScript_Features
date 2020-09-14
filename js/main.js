@@ -14,7 +14,6 @@ for (let i = 0; i < popTexts.length; i++) {
 const buttons = document.querySelectorAll('.button')
 for (let button of buttons) {
   button.addEventListener('click', positionRipple)
-  
 }
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
@@ -25,12 +24,10 @@ async function positionRipple(e) {
   e.target.appendChild(ripple)
   
   const pos = getPosition(e.target)
-  console.log(pos)
+  // console.log(pos)
   const x = (e.clientX - pos.x) / e.target.clientWidth * 100 + '%'
   const y = (e.clientY - pos.y) / e.target.clientHeight * 100 + '%'
   // console.log(x, y)
-  // root.style.setProperty('--ripple-left', x)
-  // root.style.setProperty('--ripple-top', y)
   ripple.style.left = x;
   ripple.style.top = y;
   
@@ -48,9 +45,9 @@ async function positionRipple(e) {
     }
   ];
   
-  ripple.animate(keyframes, {duration: 300})
+  ripple.animate(keyframes, {duration: 350})
   // wait for animation to finish
-  await delay(350)
+  await delay(400)
   ripple.remove()
 }
 

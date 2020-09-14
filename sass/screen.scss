@@ -6,7 +6,7 @@
 body {
   user-select: none;
   background: $primary-color;
-  color: $dark;
+  color: $primary-text-color;
 }
 
 main {
@@ -45,7 +45,7 @@ main {
     
     .bar {
       padding: 2px;
-      background: $dark;
+      background: $third-color;
       width: 85%;
       margin: 2px auto;
       border-radius: 5px;
@@ -63,17 +63,6 @@ main {
   }
 }
 
-%no-highlights {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .button {
   position: relative;
   cursor: pointer;
@@ -83,8 +72,6 @@ main {
   .ripple {
     content: '';
     position: absolute;
-    top: var(--ripple-top);
-    left: var(--ripple-left);
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.08);
     width: 0;
@@ -96,7 +83,7 @@ main {
 .pop-text {
   display: inline-block;
   @include animation(pop-text 1.2s infinite);
-  color: #fff;
+  color: $secondary-text-color;
   text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
 
@@ -136,8 +123,8 @@ main {
     &[type='submit'] {
       width: 5em;
       border-radius: $border-radius;
-      background: $dark;
-      color: white;
+      background: $third-color;
+      color: $secondary-text-color;
     }
   }
 }
@@ -151,8 +138,8 @@ main {
   text-align: center;
   
   .bottom {
-    background: $dark;
-    color: white;
+    background: $third-color;
+    color: $secondary-text-color;
     padding: 10px;
     align-self: end;
   }

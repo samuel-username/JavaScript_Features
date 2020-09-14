@@ -35,7 +35,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: lighten($dark, 50%);
+    background: $third-color;
     border-radius: 0 0 50px 50px;
     padding-bottom: 2em;
     
@@ -56,7 +56,7 @@
       
       a {
         display: block;
-        color: $dark;
+        color: $primary-text-color;
         border-radius: $border-radius;
         width: 100%;
         outline: 1px solid transparent;
@@ -106,16 +106,10 @@
         @include box-shadow('0 2px 2px rgba(0,0,0,.4)');
         flex: 0 0 150px;
         margin: .5em;
-        background: lighten($dark, 50%);
+        background: $third-color;
         font-size: 1.5em;
-        color: $primary-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        &.button::before {
-          background: rgba(255,255,255,.6)
-        }
+        color: $secondary-text-color;
+        @include center;
       }
     }
   }
@@ -132,8 +126,8 @@
     }
     
     .content {
-      padding: 2em 4.5em;
-      margin: 0 1em;
+      padding: 2em 5em;
+      margin: 0 2em;
     }
   }
 }

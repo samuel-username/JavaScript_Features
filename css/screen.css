@@ -7,17 +7,15 @@
 
 /* line 8, ../sass/_utilities.scss */
 :root {
-  --ripple-top: 50%;
-  --ripple-left: 50%;
   --page-progress: 0%;
 }
 
-/* line 14, ../sass/_utilities.scss */
+/* line 12, ../sass/_utilities.scss */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 18, ../sass/_utilities.scss */
+/* line 16, ../sass/_utilities.scss */
 a {
   text-decoration: none;
   display: inline-block;
@@ -28,6 +26,18 @@ a {
     transform: scale(1.4);
   }
 }
+/* line 45, ../sass/_utilities.scss */
+.button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* line 2, ../sass/_home.scss */
 .home {
   text-align: center;
@@ -39,7 +49,7 @@ a {
   height: 30em;
   padding: 10px;
   position: relative;
-  border-bottom: 5px solid rgba(240, 219, 79, 0.8);
+  border-bottom: 5px solid #f0db4f;
 }
 /* line 13, ../sass/_home.scss */
 .home .showcase .background {
@@ -66,7 +76,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #b2b3af;
+  background: #7f827a;
   border-radius: 0 0 50px 50px;
   padding-bottom: 2em;
 }
@@ -83,7 +93,7 @@ a {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   flex: 1 1 280px;
-  max-width: 400px;
+  max-width: 320px;
   background: #fff;
 }
 /* line 57, ../sass/_home.scss */
@@ -97,7 +107,7 @@ a {
 /* line 65, ../sass/_home.scss */
 .home .content section .ecma-card {
   padding: 3em .5em;
-  background-color: rgba(240, 219, 79, 0.8);
+  background-color: #f0db4f;
   border-radius: inherit;
   font-size: 2em;
 }
@@ -140,45 +150,41 @@ a {
   box-shadow: 0 2px 2px rgba(0,0,0,.4);
   flex: 0 0 150px;
   margin: .5em;
-  background: #b2b3af;
+  background: #7f827a;
   font-size: 1.5em;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 116, ../sass/_home.scss */
-.home .compatibility .browser-images div.button::before {
-  background: rgba(255, 255, 255, 0.6);
-}
 
 @media only screen and (min-width: 600px) {
-  /* line 126, ../sass/_home.scss */
+  /* line 120, ../sass/_home.scss */
   .home .showcase {
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 129, ../sass/_home.scss */
+  /* line 123, ../sass/_home.scss */
   .home .showcase div {
     grid-column: 2 / span 2;
   }
-  /* line 134, ../sass/_home.scss */
+  /* line 128, ../sass/_home.scss */
   .home .content {
     padding: 2em 4.5em;
-    margin: 0 1em;
+    margin: 0 2em;
   }
 }
 @media (min-width: 768px) {
-  /* line 143, ../sass/_home.scss */
+  /* line 137, ../sass/_home.scss */
   .home .compatibility {
     display: grid;
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 147, ../sass/_home.scss */
+  /* line 141, ../sass/_home.scss */
   .home .compatibility h1 {
     grid-column: 2 / span 2;
     margin: 2em auto;
   }
-  /* line 152, ../sass/_home.scss */
+  /* line 146, ../sass/_home.scss */
   .home .compatibility .browser-images {
     justify-content: center;
     grid-column: 1 / -1;
@@ -227,7 +233,7 @@ body {
 /* line 46, ../sass/screen.scss */
 .top-bar .button .bar {
   padding: 2px;
-  background: #323330;
+  background: #7f827a;
   width: 85%;
   margin: 2px auto;
   border-radius: 5px;
@@ -236,7 +242,7 @@ body {
 .top-bar:before {
   content: "";
   position: absolute;
-  background: linear-gradient(to right, rgba(240, 219, 79, 0.8) var(--page-progress), transparent var(--page-progress));
+  background: linear-gradient(to right, #f0db4f var(--page-progress), transparent var(--page-progress));
   top: 0;
   left: 0;
   right: 0;
@@ -245,28 +251,14 @@ body {
 
 /* line 66, ../sass/screen.scss */
 .button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* line 77, ../sass/screen.scss */
-.button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-/* line 83, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .button .ripple {
   content: '';
   position: absolute;
-  top: var(--ripple-top);
-  left: var(--ripple-left);
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.08);
   width: 0;
@@ -274,7 +266,7 @@ body {
   border-radius: 50%;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
   -webkit-animation: pop-text 1.2s infinite;
@@ -284,28 +276,28 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .subscription {
   max-width: 40em;
   padding: 3.2em 20px;
   margin: 4em auto;
-  background: rgba(240, 219, 79, 0.8);
+  background: #f0db4f;
   border-radius: 10px;
 }
-/* line 114, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .subscription h1 .pop-text {
   padding-right: .5em;
 }
-/* line 122, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -314,32 +306,32 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 130, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 10px;
-  background: #323330;
-  color: white;
+  background: #7f827a;
+  color: #fff;
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .footer {
   height: 12em;
-  background: rgba(240, 219, 79, 0.8);
+  background: #f0db4f;
   display: grid;
   grid-template-rows: 80% 20%;
   align-items: center;
   text-align: center;
 }
-/* line 153, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .footer .bottom {
-  background: #323330;
-  color: white;
+  background: #7f827a;
+  color: #fff;
   padding: 10px;
   align-self: end;
 }
