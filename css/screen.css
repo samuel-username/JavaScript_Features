@@ -38,14 +38,15 @@ a {
   align-content: center;
   height: 30em;
   padding: 10px;
-  background: #ddd;
+  background-image: url(images/showcase-img.jpeg);
+  background-size: cover;
 }
-/* line 12, ../sass/_home.scss */
+/* line 13, ../sass/_home.scss */
 .home .showcase h1 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/* line 19, ../sass/_home.scss */
+/* line 20, ../sass/_home.scss */
 .home .content {
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   justify-content: center;
@@ -59,60 +60,60 @@ a {
   */
   padding: 2em;
 }
-/* line 34, ../sass/_home.scss */
+/* line 35, ../sass/_home.scss */
 .home .content > h1 {
   padding: 2em 0;
   grid-column: 1 / -1;
 }
-/* line 39, ../sass/_home.scss */
+/* line 40, ../sass/_home.scss */
 .home .content section {
   margin: 1em auto;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
-/* line 45, ../sass/_home.scss */
+/* line 46, ../sass/_home.scss */
 .home .content section a {
   display: block;
-  color: #444;
+  color: #323330;
   border-radius: 10px;
   width: 100%;
   outline: 1px solid transparent;
 }
-/* line 53, ../sass/_home.scss */
+/* line 54, ../sass/_home.scss */
 .home .content section .ecma-card {
   padding: 3em .5em;
-  background-color: #ddd;
+  background-color: #f0db4f;
   border-radius: inherit;
   font-size: 2em;
 }
-/* line 59, ../sass/_home.scss */
+/* line 60, ../sass/_home.scss */
 .home .content section .ecma-card .pop-text {
   display: block;
   margin: 0 auto;
   width: 30%;
 }
-/* line 66, ../sass/_home.scss */
+/* line 67, ../sass/_home.scss */
 .home .content section p {
   height: 0;
   overflow: hidden;
   transition: .2s;
 }
-/* line 73, ../sass/_home.scss */
+/* line 74, ../sass/_home.scss */
 .home .content section:hover p {
   padding: 2em;
   height: 140px;
 }
-/* line 77, ../sass/_home.scss */
+/* line 78, ../sass/_home.scss */
 .home .content section:hover .pop-text {
   animation: none;
 }
 
 @media only screen and (min-width: 600px) {
-  /* line 90, ../sass/_home.scss */
+  /* line 91, ../sass/_home.scss */
   .home .showcase {
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 93, ../sass/_home.scss */
+  /* line 94, ../sass/_home.scss */
   .home .showcase div {
     grid-column: 2 / span 2;
   }
@@ -120,15 +121,16 @@ a {
 /* line 5, ../sass/screen.scss */
 body {
   user-select: none;
-  color: #444;
+  background: #fff;
+  color: #323330;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 .sidebar {
   display: none;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .top-bar {
   position: fixed;
   top: 0;
@@ -145,7 +147,7 @@ body {
   -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
 }
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .top-bar .button {
   width: 45px;
   height: 45px;
@@ -156,26 +158,26 @@ body {
   border-radius: 50%;
   padding: 2px;
 }
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .top-bar .button .bar {
   padding: 2px;
-  background: #444;
+  background: #323330;
   width: 85%;
   margin: 2px auto;
   border-radius: 5px;
 }
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .top-bar:before {
   content: "";
   position: absolute;
-  background: linear-gradient(to right, #ddd var(--page-progress), transparent var(--page-progress));
+  background: linear-gradient(to right, #f0db4f var(--page-progress), transparent var(--page-progress));
   top: 0;
   left: 0;
   right: 0;
   padding: 2px;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .button {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
@@ -187,13 +189,13 @@ body {
   user-select: none;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-/* line 81, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .button .ripple {
   content: '';
   position: absolute;
@@ -206,32 +208,33 @@ body {
   border-radius: 50%;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
   -webkit-animation: pop-text 1.2s infinite;
   -moz-animation: pop-text 1.2s infinite;
   animation: pop-text 1.2s infinite;
+  color: #fff;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .subscription {
   max-width: 50em;
   padding: 3.2em 20px;
   margin: 4em auto;
-  background: #ddd;
+  background: #f0db4f;
   border-radius: 10px;
 }
-/* line 110, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 114, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -240,31 +243,31 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 122, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 128, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 10px;
-  background: #444;
+  background: #323330;
   color: white;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .footer {
   height: 35vh;
-  background: #ddd;
+  background: #f0db4f;
   display: grid;
   grid-template-rows: 80% 20%;
   align-items: center;
   text-align: center;
 }
-/* line 145, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .footer .bottom {
-  background: #444;
+  background: #323330;
   color: white;
   padding: 10px;
   align-self: end;
