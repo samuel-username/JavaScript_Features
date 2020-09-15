@@ -93,6 +93,30 @@
     }
   }
   
+  .sidebar {
+    position: absolute;
+    height: 0;
+    top: 54.5px;
+    left: 0;
+    width: 100%;
+    background: $third-color;
+    font-size: 1.2em;
+    
+    li {
+      padding: 12px;
+      
+      &:hover {
+        padding-left: 25px;
+      }
+    }
+    
+    &.open {
+      height: 12.5em;
+      border: 3px solid $primary-color;
+      @include box-shadow('0 2px 2px rgba(0,0,0,.4)');
+    }
+  }
+  
   .compatibility {
     margin: 2em auto;
     

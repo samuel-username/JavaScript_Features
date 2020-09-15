@@ -18,6 +18,10 @@ a {
   display: inline-block;
 }
 
+a:visited {
+  text-decoration: underline;
+}
+
 @mixin box-shadow($value) {
   -webkit-box-shadow: unquote($value);
   -moz-box-shadow: unquote($value);

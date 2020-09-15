@@ -13,10 +13,6 @@ main {
   
 }
 
-.sidebar {
-  display: none
-}
-
 .top-bar {
   position: fixed;
   top: 0;
@@ -77,6 +73,30 @@ main {
     width: 0;
     height: 0;
     border-radius: 50%;
+  }
+}
+
+.sidebar {
+  transition: .3s;
+  overflow: hidden;
+  text-align: left;
+  background: $primary-color;
+  
+  ul {
+    list-style-type: none;
+    
+    li {
+      transition: .3s;
+    }
+    a {
+      color: $primary-text-color;
+      @extend %no-highlights;
+      display: block;
+    }
+  }
+  
+  &.open {
+    
   }
 }
 

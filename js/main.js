@@ -76,7 +76,7 @@ function getPosition(el) {
   };
 }
 
-// Handling the form
+// Handling form submit
 const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -92,7 +92,18 @@ addEventListener('scroll', (e) => {
 // Handling the sidebar
 const toggleSidebar = document.querySelector('.top-bar .button')
 const sidebar = document.querySelector('.sidebar')
+
 toggleSidebar.addEventListener('click', () => {
+  if (!sidebar.classList.contains('open')) {
+    sidebar.classList.add('open')
+  } else {
+    sidebar.classList.remove('open')
+  }
   
 })
+
+const sidebarItems = document.querySelectorAll('.bar-items');
+for (let item of sidebarItems) {
+  item.classList.add('button')
+}
 
