@@ -21,13 +21,18 @@ a {
   display: inline-block;
 }
 
+/* line 21, ../sass/_utilities.scss */
+a:visited {
+  text-decoration: underline;
+}
+
 @keyframes pop-text {
   50% {
     transform: scale(1.4);
   }
 }
-/* line 45, ../sass/_utilities.scss */
-.button {
+/* line 49, ../sass/_utilities.scss */
+.button, .sidebar ul a {
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -93,7 +98,7 @@ a {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   flex: 1 1 280px;
-  max-width: 320px;
+  max-width: 400px;
   background: #fff;
 }
 /* line 57, ../sass/_home.scss */
@@ -133,15 +138,41 @@ a {
   animation: none;
 }
 /* line 96, ../sass/_home.scss */
+.home .sidebar {
+  position: absolute;
+  height: 0;
+  top: 54.5px;
+  left: 0;
+  width: 100%;
+  background: #7f827a;
+  font-size: 1.2em;
+}
+/* line 105, ../sass/_home.scss */
+.home .sidebar li {
+  padding: 12px;
+}
+/* line 108, ../sass/_home.scss */
+.home .sidebar li:hover {
+  padding-left: 25px;
+}
+/* line 113, ../sass/_home.scss */
+.home .sidebar.open {
+  height: 12.5em;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+/* line 120, ../sass/_home.scss */
 .home .compatibility {
   margin: 2em auto;
 }
-/* line 99, ../sass/_home.scss */
+/* line 123, ../sass/_home.scss */
 .home .compatibility .browser-images {
   display: flex;
   overflow-x: auto;
 }
-/* line 103, ../sass/_home.scss */
+/* line 127, ../sass/_home.scss */
 .home .compatibility .browser-images div {
   height: 150px;
   border-radius: 50%;
@@ -159,32 +190,32 @@ a {
 }
 
 @media only screen and (min-width: 600px) {
-  /* line 120, ../sass/_home.scss */
+  /* line 144, ../sass/_home.scss */
   .home .showcase {
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 123, ../sass/_home.scss */
+  /* line 147, ../sass/_home.scss */
   .home .showcase div {
     grid-column: 2 / span 2;
   }
-  /* line 128, ../sass/_home.scss */
+  /* line 152, ../sass/_home.scss */
   .home .content {
-    padding: 2em 4.5em;
+    padding: 2em 5em;
     margin: 0 2em;
   }
 }
 @media (min-width: 768px) {
-  /* line 137, ../sass/_home.scss */
+  /* line 161, ../sass/_home.scss */
   .home .compatibility {
     display: grid;
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 141, ../sass/_home.scss */
+  /* line 165, ../sass/_home.scss */
   .home .compatibility h1 {
     grid-column: 2 / span 2;
     margin: 2em auto;
   }
-  /* line 146, ../sass/_home.scss */
+  /* line 170, ../sass/_home.scss */
   .home .compatibility .browser-images {
     justify-content: center;
     grid-column: 1 / -1;
@@ -198,11 +229,6 @@ body {
 }
 
 /* line 16, ../sass/screen.scss */
-.sidebar {
-  display: none;
-}
-
-/* line 20, ../sass/screen.scss */
 .top-bar {
   position: fixed;
   top: 0;
@@ -219,7 +245,7 @@ body {
   -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
 }
-/* line 36, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .top-bar .button {
   width: 45px;
   height: 45px;
@@ -230,7 +256,7 @@ body {
   border-radius: 50%;
   padding: 2px;
 }
-/* line 46, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .top-bar .button .bar {
   padding: 2px;
   background: #7f827a;
@@ -238,7 +264,7 @@ body {
   margin: 2px auto;
   border-radius: 5px;
 }
-/* line 55, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .top-bar:before {
   content: "";
   position: absolute;
@@ -249,13 +275,13 @@ body {
   padding: 2px;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-/* line 72, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .button .ripple {
   content: '';
   position: absolute;
@@ -266,7 +292,28 @@ body {
   border-radius: 50%;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
+.sidebar {
+  transition: .3s;
+  overflow: hidden;
+  text-align: left;
+  background: #fff;
+}
+/* line 85, ../sass/screen.scss */
+.sidebar ul {
+  list-style-type: none;
+}
+/* line 88, ../sass/screen.scss */
+.sidebar ul li {
+  transition: .3s;
+}
+/* line 91, ../sass/screen.scss */
+.sidebar ul a {
+  color: #323330;
+  display: block;
+}
+
+/* line 103, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
   -webkit-animation: pop-text 1.2s infinite;
@@ -276,12 +323,12 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .subscription {
   max-width: 40em;
   padding: 3.2em 20px;
@@ -289,15 +336,15 @@ body {
   background: #f0db4f;
   border-radius: 10px;
 }
-/* line 101, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 104, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .subscription h1 .pop-text {
   padding-right: .5em;
 }
-/* line 109, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -306,12 +353,12 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 117, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 123, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 10px;
@@ -319,7 +366,7 @@ body {
   color: #fff;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .footer {
   height: 12em;
   background: #f0db4f;
@@ -328,7 +375,7 @@ body {
   align-items: center;
   text-align: center;
 }
-/* line 140, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .footer .bottom {
   background: #7f827a;
   color: #fff;
