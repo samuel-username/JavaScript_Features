@@ -293,7 +293,6 @@ a:visited {
   }
   /* line 229, ../sass/_home.scss */
   .home .top-bar {
-    justify-content: space-between;
     animation: slide-down .5s ease-in-out;
     height: 60px;
   }
@@ -407,14 +406,15 @@ body {
 .sidebar .sidebar-list .bar-item a {
   color: #323330;
   display: block;
+  outline: 1px solid transparent;
 }
-/* line 98, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .sidebar .sidebar-list .bar-item a.active {
   color: #f0db4f;
   background: #3f403c;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
   -webkit-animation: pop-text 1.2s infinite;
@@ -424,12 +424,12 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .subscription {
   max-width: 40em;
   padding: 3.2em 20px;
@@ -437,15 +437,15 @@ body {
   background: #f0db4f;
   border-radius: 20px;
 }
-/* line 129, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 132, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .subscription h1 .pop-text {
   padding-right: .5em;
 }
-/* line 137, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -454,12 +454,12 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 145, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 151, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 20px;
@@ -467,7 +467,7 @@ body {
   color: #fff;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .footer {
   height: 12em;
   background: #f0db4f;
@@ -476,7 +476,7 @@ body {
   align-items: center;
   text-align: center;
 }
-/* line 168, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .footer .bottom {
   background: #7f827a;
   color: #fff;

@@ -94,6 +94,7 @@ main {
         color: $primary-text-color;
         @extend %no-highlights;
         display: block;
+        outline: 1px solid transparent;
         
         &.active {
           color: $secondary-color;
