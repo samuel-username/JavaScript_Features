@@ -96,8 +96,10 @@ const sidebar = document.querySelector('.sidebar')
 toggleSidebar.addEventListener('click', () => {
   if (!sidebar.classList.contains('open')) {
     sidebar.classList.add('open')
+    toggleSidebar.classList.add('close')
   } else {
     sidebar.classList.remove('open')
+    toggleSidebar.classList.remove('close')
   }
   
 })
