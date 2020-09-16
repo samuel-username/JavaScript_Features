@@ -96,7 +96,7 @@ a:visited {
 .home .content section {
   margin: 1em;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 20px;
   flex: 1 1 280px;
   max-width: 400px;
   background: #fff;
@@ -105,7 +105,7 @@ a:visited {
 .home .content section a {
   display: block;
   color: #323330;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 100%;
   outline: 1px solid transparent;
 }
@@ -342,7 +342,7 @@ body {
   padding: 3.2em 20px;
   margin: 4em auto;
   background: #f0db4f;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 /* line 121, ../sass/screen.scss */
 .subscription h1 {
@@ -369,7 +369,7 @@ body {
 /* line 143, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
-  border-radius: 10px;
+  border-radius: 20px;
   background: #7f827a;
   color: #fff;
 }
