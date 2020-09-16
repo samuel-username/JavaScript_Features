@@ -51,14 +51,14 @@ async function positionRipple(e) {
 }
 
 function getPosition(el) {
-  var xPos = 0;
-  var yPos = 0;
+  let xPos = 0;
+  let yPos = 0;
  
   while (el) {
     if (el.tagName == "BODY") {
       // deal with browser quirks with body/window/document and page scroll
-      var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
-      var yScroll = el.scrollTop || document.documentElement.scrollTop;
+      let xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+      let yScroll = el.scrollTop || document.documentElement.scrollTop;
  
       xPos += (el.offsetLeft - xScroll + el.clientLeft);
       yPos += (el.offsetTop - yScroll + el.clientTop);
