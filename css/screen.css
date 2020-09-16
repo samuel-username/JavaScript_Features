@@ -115,29 +115,37 @@ a:visited {
   background-color: #f0db4f;
   border-radius: inherit;
   font-size: 2em;
+  transition: .2s;
 }
-/* line 71, ../sass/_home.scss */
+/* line 72, ../sass/_home.scss */
 .home .content section .ecma-card .pop-text {
   display: block;
   margin: 0 auto;
   width: 35%;
 }
-/* line 78, ../sass/_home.scss */
+/* line 79, ../sass/_home.scss */
 .home .content section p {
   height: 0;
   overflow: hidden;
   transition: .2s;
 }
-/* line 85, ../sass/_home.scss */
+/* line 86, ../sass/_home.scss */
+.home .content section:hover .ecma-card {
+  transform: scale(0.95);
+  -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,.2);
+  box-shadow: inset 0 2px 2px rgba(0,0,0,.2);
+}
+/* line 90, ../sass/_home.scss */
 .home .content section:hover p {
   padding: 2em;
   height: 140px;
 }
-/* line 89, ../sass/_home.scss */
+/* line 94, ../sass/_home.scss */
 .home .content section:hover .pop-text {
   animation: none;
 }
-/* line 96, ../sass/_home.scss */
+/* line 101, ../sass/_home.scss */
 .home .sidebar {
   position: absolute;
   height: 0;
@@ -147,15 +155,15 @@ a:visited {
   background: #7f827a;
   font-size: 1.2em;
 }
-/* line 105, ../sass/_home.scss */
+/* line 110, ../sass/_home.scss */
 .home .sidebar li {
   padding: 12px;
 }
-/* line 108, ../sass/_home.scss */
+/* line 113, ../sass/_home.scss */
 .home .sidebar li:hover {
   padding-left: 25px;
 }
-/* line 113, ../sass/_home.scss */
+/* line 118, ../sass/_home.scss */
 .home .sidebar.open {
   height: 12.5em;
   border: 3px solid #fff;
@@ -163,16 +171,16 @@ a:visited {
   -moz-box-shadow: 0 2px 2px rgba(0,0,0,.4);
   box-shadow: 0 2px 2px rgba(0,0,0,.4);
 }
-/* line 120, ../sass/_home.scss */
+/* line 125, ../sass/_home.scss */
 .home .compatibility {
   margin: 2em auto;
 }
-/* line 123, ../sass/_home.scss */
+/* line 128, ../sass/_home.scss */
 .home .compatibility .browser-images {
   display: flex;
   overflow-x: auto;
 }
-/* line 127, ../sass/_home.scss */
+/* line 132, ../sass/_home.scss */
 .home .compatibility .browser-images div {
   height: 150px;
   border-radius: 50%;
@@ -190,32 +198,32 @@ a:visited {
 }
 
 @media only screen and (min-width: 600px) {
-  /* line 144, ../sass/_home.scss */
+  /* line 149, ../sass/_home.scss */
   .home .showcase {
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 147, ../sass/_home.scss */
+  /* line 152, ../sass/_home.scss */
   .home .showcase div {
     grid-column: 2 / span 2;
   }
-  /* line 152, ../sass/_home.scss */
+  /* line 157, ../sass/_home.scss */
   .home .content {
     padding: 2em 5em;
     margin: 0 2em;
   }
 }
 @media (min-width: 768px) {
-  /* line 161, ../sass/_home.scss */
+  /* line 166, ../sass/_home.scss */
   .home .compatibility {
     display: grid;
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 165, ../sass/_home.scss */
+  /* line 170, ../sass/_home.scss */
   .home .compatibility h1 {
     grid-column: 2 / span 2;
     margin: 2em auto;
   }
-  /* line 170, ../sass/_home.scss */
+  /* line 175, ../sass/_home.scss */
   .home .compatibility .browser-images {
     justify-content: center;
     grid-column: 1 / -1;
