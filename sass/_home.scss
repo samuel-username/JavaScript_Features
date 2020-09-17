@@ -223,7 +223,7 @@
       @include animation(slide-down .5s ease-in-out);
       height: $topbar-height + 5px;
       
-      &>.button {
+      & > .button {
         visibility: hidden;
       }
     }
@@ -246,3 +246,4 @@
     }
   }
 }
+

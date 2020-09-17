@@ -75,7 +75,7 @@ main {
   .ripple {
     content: '';
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     background: rgba(0,0,0,.08);
     width: 0;
     height: 0;
@@ -132,6 +132,7 @@ main {
   
   h1 {
     padding: 20px;
+    text-align: center;
     
     .pop-text {
       padding-right: .5em;
@@ -150,6 +151,7 @@ main {
     &[type='text'] {
       width: 90%;
       margin-top: 20px;
+      border-radius: $border-radius / 2;
     }
     
     &[type='submit'] {
