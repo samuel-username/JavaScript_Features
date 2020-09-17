@@ -123,7 +123,7 @@
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: map-get($break-points, sm)) {
     .showcase {
       grid-template-columns: auto repeat(2, 20em) auto;
     
@@ -138,7 +138,7 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: map-get($break-points, md)) {
     .top-bar {
       .close {
         z-index: 10;
@@ -166,7 +166,7 @@
       height: 100vh;
       width: 0;
       background: darken($third-color, 10%);
-    
+      
       .sidebar-list {
         flex-direction: column;
     
@@ -185,18 +185,17 @@
             font-size: 2.2em;
           }
         }
-    
       }
     
       &.open {
         width: 100%;
-    
+        
         @for $i from 1 through 5 {
           .bar-item:nth-child(#{$i}) {
             transition-delay: $i * 0.15s
           }
         }
-    
+        
         .bar-item {
           transform: none;
         }
@@ -204,16 +203,16 @@
     }
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: map-get($break-points, md)) {
     .compatibility {
       display: grid;
       grid-template-columns: auto repeat(2, 20em) auto;
-    
+      
       h1 {
         grid-column: 2 / span 2;
         margin: 2em auto;
       }
-    
+      
       .browser-images {
         justify-content: center;
         grid-column: 1 / -1;
@@ -221,10 +220,9 @@
     }
     
     .top-bar {
-      // justify-content: space-between;
-      animation: slide-down .5s ease-in-out;
+      @include animation(slide-down .5s ease-in-out);
       height: $topbar-height + 5px;
-    
+      
       &>.button {
         visibility: hidden;
       }
@@ -240,7 +238,7 @@
             margin: 8px;
           }
     
-          &:hover {
+          &:not(.active):hover {
             background: $secondary-color;
           }
         }

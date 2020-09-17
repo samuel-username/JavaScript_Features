@@ -245,71 +245,73 @@ a:visited {
   .home .sidebar .sidebar-list .bar-item:hover {
     font-size: 2.2em;
   }
-  /* line 191, ../sass/_home.scss */
+  /* line 190, ../sass/_home.scss */
   .home .sidebar.open {
     width: 100%;
   }
-  /* line 195, ../sass/_home.scss */
+  /* line 194, ../sass/_home.scss */
   .home .sidebar.open .bar-item:nth-child(1) {
     transition-delay: 0.15s;
   }
-  /* line 195, ../sass/_home.scss */
+  /* line 194, ../sass/_home.scss */
   .home .sidebar.open .bar-item:nth-child(2) {
     transition-delay: 0.3s;
   }
-  /* line 195, ../sass/_home.scss */
+  /* line 194, ../sass/_home.scss */
   .home .sidebar.open .bar-item:nth-child(3) {
     transition-delay: 0.45s;
   }
-  /* line 195, ../sass/_home.scss */
+  /* line 194, ../sass/_home.scss */
   .home .sidebar.open .bar-item:nth-child(4) {
     transition-delay: 0.6s;
   }
-  /* line 195, ../sass/_home.scss */
+  /* line 194, ../sass/_home.scss */
   .home .sidebar.open .bar-item:nth-child(5) {
     transition-delay: 0.75s;
   }
-  /* line 200, ../sass/_home.scss */
+  /* line 199, ../sass/_home.scss */
   .home .sidebar.open .bar-item {
     transform: none;
   }
 }
 @media (min-width: 768px) {
-  /* line 208, ../sass/_home.scss */
+  /* line 207, ../sass/_home.scss */
   .home .compatibility {
     display: grid;
     grid-template-columns: auto repeat(2, 20em) auto;
   }
-  /* line 212, ../sass/_home.scss */
+  /* line 211, ../sass/_home.scss */
   .home .compatibility h1 {
     grid-column: 2 / span 2;
     margin: 2em auto;
   }
-  /* line 217, ../sass/_home.scss */
+  /* line 216, ../sass/_home.scss */
   .home .compatibility .browser-images {
     justify-content: center;
     grid-column: 1 / -1;
   }
-  /* line 223, ../sass/_home.scss */
+  /* line 222, ../sass/_home.scss */
   .home .top-bar {
-    animation: slide-down .5s ease-in-out;
+    -webkit-animation: slide-down 0.5s ease-in-out;
+    -moz-animation: slide-down 0.5s ease-in-out;
+    animation: slide-down 0.5s ease-in-out;
     height: 60px;
   }
-  /* line 228, ../sass/_home.scss */
+  /* line 226, ../sass/_home.scss */
   .home .top-bar > .button {
     visibility: hidden;
   }
-  /* line 234, ../sass/_home.scss */
+  /* line 232, ../sass/_home.scss */
   .home .sidebar .sidebar-list {
     justify-content: flex-end;
   }
-  /* line 238, ../sass/_home.scss */
+  /* line 236, ../sass/_home.scss */
   .home .sidebar .sidebar-list .bar-item a {
     padding: 10px;
     margin: 8px;
   }
-  /* line 243, ../sass/_home.scss */
-  .home .sidebar .sidebar-list .bar-item:hover {
+  /* line 241, ../sass/_home.scss */
+  .home .sidebar .sidebar-list .bar-item:not(.active):hover {
     background: #f0db4f;
   }
 }
