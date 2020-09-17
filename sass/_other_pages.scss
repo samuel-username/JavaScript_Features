@@ -11,17 +11,26 @@
   }
   
   .sidebar {
+    position: fixed;
     
     .sidebar-list {
       .bar-item {
         padding: 1em;
+        border-bottom: 2px solid lighten($third-color, 30%);
+        
+        &:last-child {
+          border-bottom: 0;
+        }
+        
+        &:hover {
+          background: lighten($third-color, 40%);
+        }
       }
     }
   }
   
   @media (max-width: map-get($break-points, md)) {
     .sidebar {
-      position: fixed;
       top: 0;
       left: -100%;
       height: 100%;
@@ -48,8 +57,10 @@
       
       &.open {
         left: 0;
+        transition-delay: .2s;
         
         & + .overlay {
+          transition-delay: .2s;
           z-index: 9;
           opacity: 1;
         }
@@ -76,7 +87,6 @@
     .sidebar {
       // grid-column: 1 / 2;
       @include box-shadow("2px 0 2px rgba(0, 0, 0, .2)");
-      position: fixed;
       height: 100%;
       width: 200px;
     }
