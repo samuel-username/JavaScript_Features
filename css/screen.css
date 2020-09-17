@@ -467,14 +467,18 @@ body {
   right: 0;
   padding: 2px;
 }
+/* line 63, ../sass/screen.scss */
+.top-bar .logo {
+  width: 70px;
+}
 
-/* line 64, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .button .ripple {
   content: '';
   position: absolute;
@@ -485,7 +489,7 @@ body {
   border-radius: 50%;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .sidebar {
   transition: .3s;
   overflow: hidden;
@@ -493,30 +497,30 @@ body {
   background: #fff;
   overflow-y: auto;
 }
-/* line 88, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .sidebar .sidebar-list {
   list-style-type: none;
 }
-/* line 91, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .sidebar .sidebar-list .bar-item {
   transition: .3s;
 }
-/* line 94, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .sidebar .sidebar-list .bar-item a {
   color: #323330;
   display: block;
   outline: 1px solid transparent;
 }
-/* line 101, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .sidebar .sidebar-list .bar-item.active {
   background: #3f403c;
 }
-/* line 103, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .sidebar .sidebar-list .bar-item.active a {
   color: #f0db4f;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
   -webkit-animation: pop-text 1.2s infinite;
@@ -526,12 +530,12 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .subscription {
   max-width: 40em;
   padding: 3.2em 20px;
@@ -539,15 +543,15 @@ body {
   background: #f0db4f;
   border-radius: 20px;
 }
-/* line 133, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 136, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .subscription h1 .pop-text {
   padding-right: .5em;
 }
-/* line 141, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -556,12 +560,12 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 155, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 20px;
@@ -569,7 +573,7 @@ body {
   color: #fff;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .footer {
   height: 12em;
   background: #f0db4f;
@@ -578,7 +582,7 @@ body {
   align-items: center;
   text-align: center;
 }
-/* line 172, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .footer .bottom {
   background: #7f827a;
   color: #fff;
