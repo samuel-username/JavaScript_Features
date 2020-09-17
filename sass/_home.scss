@@ -138,7 +138,7 @@
     }
   }
   
-  @media (max-width: map-get($break-points, md)) {
+  @media (max-width: map-get($break-points, sm)) {
     .top-bar {
       .close {
         z-index: 10;
@@ -203,7 +203,7 @@
     }
   }
   
-  @media (min-width: map-get($break-points, md)) {
+  @media (min-width: map-get($break-points, sm) + 1px) {
     .compatibility {
       display: grid;
       grid-template-columns: auto repeat(2, 20em) auto;

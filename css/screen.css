@@ -192,7 +192,7 @@ a:visited {
     margin: 0 2em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   /* line 143, ../sass/_home.scss */
   .home .top-bar .close {
     z-index: 10;
@@ -274,7 +274,7 @@ a:visited {
     transform: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 601px) {
   /* line 207, ../sass/_home.scss */
   .home .compatibility {
     display: grid;
@@ -417,7 +417,7 @@ a:visited {
     -webkit-box-shadow: 2px 0 2px rgba(0, 0, 0, .2);
     -moz-box-shadow: 2px 0 2px rgba(0, 0, 0, .2);
     box-shadow: 2px 0 2px rgba(0, 0, 0, .2);
-    height: calc(100% - 60px);
+    height: calc(100% - 55px + 5px);
     width: 200px;
   }
   /* line 110, ../sass/_other_pages.scss */
