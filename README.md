@@ -1,7 +1,7 @@
 
 # Modern Vanilla JavaScript
 
-Want to learn modern JavaScript? Then this is for you. New features which are annually added to JavaScript since 2015 are elaborated here so that anyone can use and understand them.
+Want to learn modern JavaScript? Then this is for you. New features which are annually added to JavaScript since 2015 are elaborated here so that anyone can use and understand them. Before you proceed, please note that this content is only for you if you've already started writing JavaScript.
 
 ## Table of Content
 
