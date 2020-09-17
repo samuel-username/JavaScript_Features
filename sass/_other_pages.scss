@@ -1,8 +1,92 @@
 
 .other-pages {
+  padding-top: $topbar-height;
   header {
+    background: $secondary-color;
+    margin: 1.7em 0;
+    
     h1 {
+      padding: 2em 1em;
+    }
+  }
+  
+  .sidebar {
+    
+    .sidebar-list {
+      .bar-item {
+        padding: 1em;
+      }
+    }
+  }
+  
+  @media (max-width: map-get($break-points, md)) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 75%;
+      z-index: 10;
       
+      .sidebar-list {
+        .bar-item {
+          
+        }
+      }
+      
+      & + .overlay {
+        transition: .3s;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .3);
+        z-index: -1;
+        opacity: 0;
+      }
+      
+      &.open {
+        left: 0;
+        
+        & + .overlay {
+          z-index: 9;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: map-get($break-points, sm)) {
+    .sidebar {
+      width: 40%;
+    }
+  }
+  
+  @media (min-width: map-get($break-points, md)) {
+    display: grid;
+    grid-template-columns: 200px minmax(auto, 80ch) auto;
+    gap: 2em;
+    
+    > * {
+      grid-column: 2 / 3;
+      
+    }
+    
+    .sidebar {
+      // grid-column: 1 / 2;
+      @include box-shadow("2px 0 2px rgba(0, 0, 0, .2)");
+      position: fixed;
+      height: 100%;
+      width: 200px;
+    }
+    
+    .overlay {
+      display: none;
+    }
+    
+    .footer {
+      grid-column: 1 / -1;
     }
   }
 }

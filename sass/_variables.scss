@@ -7,7 +7,9 @@ $primary-text-color: #323330; // rgb(50, 51, 48);
 $secondary-text-color: #fff;
 
 $border-radius: 20px;
-
-$dark: #323330; 
-
+$topbar-height: 55px;
+$break-points: (
+  sm: 600px,
+  md: 768px
+)
 

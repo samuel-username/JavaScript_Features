@@ -122,13 +122,11 @@
       }
     }
   }
-}
 
-@media (min-width: 600px) {
-  .home {
+  @media (min-width: 600px) {
     .showcase {
       grid-template-columns: auto repeat(2, 20em) auto;
-      
+    
       div {
         grid-column: 2 / span 2;
       }
@@ -139,15 +137,13 @@
       margin: 0 2em;
     }
   }
-}
-
-@media (max-width: 768px) {
-  .home {
+  
+  @media (max-width: 768px) {
     .top-bar {
       .close {
         z-index: 10;
         transform: translate(-25px);
-        
+          
         .bar {
           background: $primary-color;
         }
@@ -162,7 +158,7 @@
         }
       }
     }
-    
+      
     .sidebar {
       position: fixed;
       top: 0;
@@ -170,56 +166,54 @@
       height: 100vh;
       width: 0;
       background: darken($third-color, 10%);
-      
+    
       .sidebar-list {
         flex-direction: column;
-        
+    
         .bar-item {
           font-size: 1.8em;
           font-weight: 300;
           transform: translateX(-100%);
-          
+    
           a {
             color: $primary-color;
             @include center;
             height: calc(100vh / 5);
           }
-          
+    
           &:hover {
             font-size: 2.2em;
           }
         }
-        
+    
       }
-      
+    
       &.open {
         width: 100%;
-        
+    
         @for $i from 1 through 5 {
           .bar-item:nth-child(#{$i}) {
             transition-delay: $i * 0.15s
           }
         }
-        
+    
         .bar-item {
           transform: none;
         }
       }
     }
   }
-}
-
-@media (min-width: 768px) {
-  .home {
+  
+  @media (min-width: 768px) {
     .compatibility {
       display: grid;
       grid-template-columns: auto repeat(2, 20em) auto;
-      
+    
       h1 {
         grid-column: 2 / span 2;
         margin: 2em auto;
       }
-      
+    
       .browser-images {
         justify-content: center;
         grid-column: 1 / -1;
@@ -229,26 +223,23 @@
     .top-bar {
       // justify-content: space-between;
       animation: slide-down .5s ease-in-out;
-      height: 60px;
-      
-      & > .button {
+      height: $topbar-height + 5px;
+    
+      &>.button {
         visibility: hidden;
       }
     }
     
     .sidebar {
-      
       .sidebar-list {
         justify-content: flex-end;
-        
+    
         .bar-item {
-          
-          
           a {
             padding: 10px;
             margin: 8px;
           }
-          
+    
           &:hover {
             background: $secondary-color;
           }
@@ -257,4 +248,3 @@
     }
   }
 }
-

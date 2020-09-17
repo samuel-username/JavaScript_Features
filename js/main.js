@@ -92,8 +92,9 @@ addEventListener('scroll', (e) => {
 // Handling the sidebar
 const toggleSidebar = document.querySelector('.top-bar .button')
 const sidebar = document.querySelector('.sidebar')
+const overlay = document.querySelector('.overlay')
 
-toggleSidebar.addEventListener('click', () => {
+const handleSidebar = () => {
   if (!sidebar.classList.contains('open')) {
     sidebar.classList.add('open')
     toggleSidebar.classList.add('close')
@@ -101,8 +102,9 @@ toggleSidebar.addEventListener('click', () => {
     sidebar.classList.remove('open')
     toggleSidebar.classList.remove('close')
   }
-  
-})
+}
+toggleSidebar.addEventListener('click', handleSidebar)
+overlay ? overlay.addEventListener('click', handleSidebar) : ''
 
 const sidebarItems = document.querySelectorAll('.bar-items');
 for (let item of sidebarItems) {
