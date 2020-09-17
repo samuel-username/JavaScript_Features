@@ -436,8 +436,9 @@ body {
   -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3);
   height: 55px;
+  overflow: hidden;
 }
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 .top-bar .button {
   width: 45px;
   height: 45px;
@@ -448,7 +449,7 @@ body {
   border-radius: 50%;
   padding: 2px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .top-bar .button .bar {
   padding: 2px;
   background: #7f827a;
@@ -457,7 +458,7 @@ body {
   border-radius: 5px;
   transition: .3s;
 }
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .top-bar:before {
   content: "";
   position: absolute;
@@ -467,18 +468,18 @@ body {
   right: 0;
   padding: 2px;
 }
-/* line 63, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .top-bar .logo {
-  width: 70px;
+  width: 75px;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .button {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .button .ripple {
   content: '';
   position: absolute;
@@ -489,10 +490,9 @@ body {
   border-radius: 50%;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .sidebar {
   transition: .3s;
-  overflow: hidden;
   text-align: left;
   background: #fff;
   overflow-y: auto;
@@ -520,22 +520,22 @@ body {
   color: #f0db4f;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .pop-text {
   display: inline-block;
-  -webkit-animation: pop-text 1.2s infinite;
-  -moz-animation: pop-text 1.2s infinite;
-  animation: pop-text 1.2s infinite;
+  -webkit-animation: pop-text 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  -moz-animation: pop-text 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  animation: pop-text 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .content {
   display: grid;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .subscription {
   max-width: 40em;
   padding: 3.2em 20px;
@@ -543,15 +543,15 @@ body {
   background: #f0db4f;
   border-radius: 20px;
 }
-/* line 137, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .subscription h1 {
   padding: 20px;
 }
-/* line 140, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .subscription h1 .pop-text {
   padding-right: .5em;
 }
-/* line 145, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .subscription input {
   padding: 15px;
   margin: 15px auto;
@@ -560,12 +560,12 @@ body {
   outline: none;
   font-size: 1.1em;
 }
-/* line 153, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .subscription input[type='email'], .subscription input[type='text'] {
   width: 90%;
   margin-top: 20px;
 }
-/* line 159, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .subscription input[type='submit'] {
   width: 5em;
   border-radius: 20px;
@@ -573,7 +573,7 @@ body {
   color: #fff;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .footer {
   height: 12em;
   background: #f0db4f;
@@ -582,7 +582,7 @@ body {
   align-items: center;
   text-align: center;
 }
-/* line 176, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .footer .bottom {
   background: #7f827a;
   color: #fff;

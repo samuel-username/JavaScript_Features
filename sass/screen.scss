@@ -29,6 +29,7 @@ main {
     "1px 2px 3px rgba(0, 0, 0, .3), -1px 0 2px rgba(0, 0, 0, .3)"
   );
   height: $topbar-height;
+  overflow: hidden;
   
   .button {
     width: 45px;
@@ -61,7 +62,7 @@ main {
   }
   
   .logo {
-    width: 70px;
+    width: 75px;
   }
 }
 
@@ -84,7 +85,6 @@ main {
 
 .sidebar {
   transition: .3s;
-  overflow: hidden;
   text-align: left;
   background: $primary-color;
   overflow-y: auto;
@@ -110,15 +110,11 @@ main {
       }
     }
   }
-  
-  &.open {
-    
-  }
 }
 
 .pop-text {
   display: inline-block;
-  @include animation(pop-text 1.2s infinite);
+  @include animation(pop-text 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite);
   color: $secondary-text-color;
   text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
