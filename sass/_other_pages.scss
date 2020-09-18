@@ -69,10 +69,10 @@
       
       &.open {
         left: 0;
-        transition-delay: .2s;
+        transition-delay: $general-delay;
         
         & + .overlay {
-          transition-delay: .2s;
+          transition-delay: $general-delay;
           z-index: 9;
           opacity: 1;
         }
