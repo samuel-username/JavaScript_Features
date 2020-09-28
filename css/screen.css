@@ -334,7 +334,7 @@ a:visited {
 }
 /* line 8, ../sass/_other_pages.scss */
 .other-pages header h1 {
-  padding: 2em 1em;
+  padding: 3em 1em;
 }
 /* line 13, ../sass/_other_pages.scss */
 .other-pages p {
@@ -362,7 +362,7 @@ a:visited {
   border-bottom: 0;
 }
 /* line 37, ../sass/_other_pages.scss */
-.other-pages .sidebar .sidebar-list .bar-item:hover {
+.other-pages .sidebar .sidebar-list .bar-item:not(.active):hover {
   background: #e4e5e3;
 }
 @media (max-width: 768px) {
@@ -508,7 +508,7 @@ body {
 .button .ripple {
   content: '';
   position: absolute;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.08);
   width: 0;
   height: 0;
