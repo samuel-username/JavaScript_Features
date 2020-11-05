@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New JavaScript Features</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="sidebar-container">
+    <ul id="sidebar">
+      <li><a href="#header">Header</a></li>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#ecma-16">ECMAScript <span>2016</span></a></li>
+      <li><a href="#ecma-17">ECMAScript <span>2017</span></a></li>
+      <li><a href="#ecma-18">ECMAScript <span>2018</span></a></li>
+      <li><a href="#ecma-19">ECMAScript <span>2019</span></a></li>
+      <li><a href="#ecma-20">ECMAScript <span>2020</span></a></li>
+      <li><a href="#footer">Footer</a></li>
+    </ul>
+  </div>
+  
+  <div id="main">
+    <header id="header">
+      <div id="top-bar">
+        <div id="button">
+          <div class="bar" id="bar-1"></div>
+          <div class="bar" id="bar-2"></div>
+          <div class="bar" id="bar-3"></div>
+        </div>
+      </div>
+      <div id="header-background"></div>
+      <h1>New JavaScript Features (A must know for all JavaScript developers)</h1>
+    </header>
+    
+    <div id="overlay"></div>
+    
+    <article>
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>Welcome to the only webpage that covers new JavaScript features from 2016 till date. I put it all together from various sources to keep JavaScript developers (who are not aware of these new features) up to date with the development of JavaScript, so they can get familiar with them and start using them as soon as all major browsers fully support them. I hope this truly helps, and if it does, gladly upvote the code.</p>
+        <p>As some of you may know, the standards of JavaScript and some other scripting languages (e.g. JScript) is derived from another programming language. That language is known as ECMAScript. So any feature added to ECMAScript is also a JavaScript feature and they are practically considered the same language. This webpage covers all the major features added yearly to ECMAScript from the year 2016 up to July 2020. If you don't know ECMAScript 2015 (formerly known as ES6), I suggest you <a href="#">check it out here</a>. None of them have a large feature release compared to ECMAScript 2015.</p>
+        <p>Before you start consuming the page's content with your brain, I should tell you that this page is pretty long and it will take much of your time. But I assure you that it is worth it.</p>
+      </section>
+      
+      <section id="ecma-16">
+        <h2>ECMAScript <span class="year">2016</span></h2>
+        <p>ECMAScript 2016 introduced very few features compared to ES 6: </p>
+        <ul class="feature-list">
+          <li><a href="#arrPI">Array.prototype.includes()</a></li>
+          <li><a href="#exOp">Exponentiation Operator</a></li>
+        </ul>
+        
+        <div class="features" id="arrPI">
+          <h2>Array.prototype.includes()</h2>
+          <p>Array.prototype.includes() checks the array for the value passed as an argument. It returns true if the array contains the value, otherwise, it returns false.</p>
+          <code>
+            <span>nums = [0, 1, 2, 3];</span><br>
+            <span>if (nums.includes(2)) {</span>
+            <span><i class="indent">...</i>console.log('Array contains value');</span>
+            <span>}</span>
+          </code>
+          <p>Before, we needed to use Array.prototype.indexOf() to check if the given array contains an element or not.</p>
+          <code>
+            <span>let nums = [1, 2, 3, 4];</span><br>
+            <span>if (nums.indexOf(2) !== -1) {</span>
+            <span><i class="indent">...</i>console.log('Array contains value');</span>
+            <span>}</span>
+          </code>
+          <p>Array.prototype.includes() handles NaN better than Array.prototype.indexOf(). If the array contains NaN, then indexOf() does not return a correct index while searching for NaN.</p>
+          <p>Array.prototype.includes() returns the correct value when searching for NaN.</p>
+          <code>
+            <span>const array = [1, 2, 3, 4, NaN];</span><br>
+            <span><i class="comment">Instead of</i></span>
+            <span>if (array.indexOf(3) >= 3) {</span>
+            <span><i class="indent">...</i>console.log(true);</span>
+            <span>}</span><br>
+            <span><i class="comment">Use</i></span>
+            <span>if (array.includes(3)) {</span>
+            <span><i class="indent">...</i>console.log(true);</span>
+            <span>}</span><br>
+            <span><i class="comment">Note that indexOf() doesn't work for searching NaN</i></span>
+            <span>array.includes(NaN); <i class="comment">true</i></span>
+            <span>array.indexOf(NaN); <i class="comment">-1</i></span>
+          </code>
+        </div>
+        
+        <div class="features" id="exOp">
+          <h2>Exponentiation Operator</h2>
+          <p>JavaScript already supports many arithmetic operators like +, -, * and more. ECMAScript 2016 introduced the exponentiation operator, **. It has the same purpose as Math.pow(). It returns the first argument raised to the power of the second argument.</p>
+          <p>You can also perform x **= y for directly assigning the value to the variable x.</p>
+          <code>
+            <span>let base = 3;</span>
+            <span>let exponent = 4;</span><br>
+            <span><i class="comment">You can either do this</i></span>
+            <span>let result = base ** exponent;</span>
+            <span>console.log(result); <i class="comment">81</i></span><br>
+            <span><i class="comment">Or this</i></span>
+            <span>base **= exponent</span>
+            <span>console.log(base) <i class="comment">81</i></span>
+          </code>
+        </div>
+      </section>
+      
+      <section id="ecma-17">
+        <h2>ECMAScript <span class="year">2017</span></h2>
+        <p>ECMAScript 2017 introduced features to support asynchronous programming, shared memory (don't worry about that for now) and other stuffs: </p>
+        <ul class="feature-list">
+          <li><a href="#objectEntries">Object.entries</a></li>
+          <li><a href="#objectValues">Object.values</a></li>
+          <li><a href="#stringPadding">String padding</a></li>
+          <li><a href="#">Object.getOwnPropertyDescriptors</a></li>
+          <li><a href="#">Trailing commas in function parameter lists and calls</a></li>
+          <li><a href="#">Async functions</a></li>
+        </ul>
+        
+        <div class="features" id="objectEntries">
+          <h2>Object.entries</h2>
+          <p>When a JavaScript datatype with key value pairs is passed to the entries method, the return value is a two dimensional array of keys and values. This makes it very simple to do things like using objects in loops or converting objects into Maps.</p>
+          <p>Using objects in loops: </p>
+          <code>
+            <span>const cars = { BMW: 3, Tesla: 2, Toyota: 1 };</span><br>
+            <span><i class="comment">ES 5.1</i></span>
+            <span><i class="comment">Instead of extracting keys and then again looping</i></span>
+            <span>Object.keys(cars).forEach(function(key) {</span>
+            <span><i class="indent">...</i>console.log("key: " + key + " value: " + cars[key]);</span>
+            <span>});</span><br>
+            <span><i class="comment">ECMAScript 2017 (ES 8)</i></span>
+            <span><i class="comment">Use Object.entries</i></span>
+            <span>for ([key, value] of Object.entries(cars)) {</span>
+            <span><i class="indent">...</i>console.log(`key: ${key} value: ${value}`);</span>
+            <span>}</span>
+          </code>
+          
+          <p>Converting objects into map: </p>
+          <code>
+            <span>const cars = { 'BMW': 3, 'Tesla': 2, 'Toyota': 1 };</span><br>
+            <span><i class="comment">ES2015</i></span>
+            <span><i class="comment">Instead of..</i></span>
+            <span><i class="comment">Get object keys, then add each key to a map in a loop</i></span>
+            <span>const map1 = new Map()</span>
+            <span>Object.keys(cars).forEach(key => {</span>
+            <span><i class="indent">...</i>map1.set(key, cars[key]);</span>
+            <span>});</span><br>
+            <span>console.log(map1) <i class="comment">Map { 'BMW' => 3, 'Tesla' => 2, 'Toyota' => 1 }</i></span><br><br>
+            <span><i class="comment">ES2017 and onwards</i><br><i class="comment">Use</i></span>
+            <span>const map = new Map(Object.entries(cars));</span><br>
+            <span>console.log(map) <i class="comment">Map { 'BMW' => 3, 'Tesla' => 2, 'Toyota' => 1 }</i></span>
+          </code>
+          <p>If you don't know what a map object is in JavaScript, <a href="https://www.geeksforgeeks.org/map-in-javascript/amp/">click here for more info</a>.</p>
+        </div>
+        
+        <div class="features" id="objectValues">
+          <h2>Object.values</h2>
+          <p>Object.values works similar to Object.keys, but instead of returning only the keys, it returns a single dimension array of the values.</p>
+          <code>
+            <span>const cars = { 'BMW': 3, 'Tesla': 2, 'Toyota': 1 };</span><br>
+            <span><i class="comment">ES2015</i></span>
+            <span><i class="comment">Instead of..</i></span>
+            <span>const values = Object.keys(cars).map(key => { cars[key] });</span>
+            <span>console.log(values); <i class="comment">[3, 2, 1]</i></span><br>
+            <span><i class="comment">ES2017 and onwards</i><br><i class="comment">Use</i></span>
+            <span>const values = Object.values(cars);</span>
+            <span>console.log(values); <i class="comment">[3, 2, 1]</i></span>
+          </code>
+        </div>
+        
+        <div class="features" id="stringPadding">
+          <h2>String Padding</h2>
+          <p>Two methods padStart and padEnd has been added to String to support the padding at the beginning and the end of the string. If you want to format a list of numbers for display purposes, they're your best bet.
+          <p>The padStart method: </p>
+          <code>
+            <span>const nums = [0, 1, 12, 123, 1234];</span><br>
+            <span>nums.map(value => {</span>
+            <span><i class="indent">...</i>value = value.toString().padStart(4, 0); <i class="comment">Prepend zero until length is 4</i></span>
+            <span><i class="indent">...</i>console.log(value);</span>
+            <span>});</span><br>
+            <span><i class="comment">Prints out the following</i></span>
+            <span><i class="comment">0000</i><br><i class="comment">0001</i><br><i class="comment">0012</i><br><i class="comment">0123</i><br><i class="comment">1234</i></span>
+          </code>
+          <p>The padEnd method: </p>
+          <code>
+            <span>const nums = [0, 1, 12, 123, 1234];</span><br>
+            <span>nums.map(value => {</span>
+            <span><i class="indent">...</i>value = value.toString().padEnd(4, 0); <i class="comment">Append zero until length is 4</i></span>
+            <span><i class="indent">...</i>console.log(value);</span>
+            <span>});</span><br>
+            <span><i class="comment">Prints out the following</i></span>
+            <span><i class="comment">0000</i><br><i class="comment">1000</i><br><i class="comment">1200</i><br><i class="comment">1230</i><br><i class="comment">1234</i></span>
+          </code>
+          <p>padStart and padEnd with Object.entries: </p>
+          <code>
+            <span>const cars = { 'BMW': '11', 'Tesla': '6', 'Lanborghini': '0' }</span><br>
+            <span>Object.entries(cars).map(([car, count]) => {</span>
+            <span><i class="indent">...</i><i class="comment">padEnd appends ' -' until the name becomes 20 characters</i></span>
+            <span><i class="indent">...</i><i class="comment">padStart prepends '0' until the count becomes 3 characters.</i></span>
+            <span><i class="indent">...</i>console.log(`${car.padEnd(20, ' -')} Count: ${count.padStart(3, 0)}`);</span>
+            <span>});</span><br>
+            <span><i class="comment">BMW - - - - - - - - Count: 011</i></span>
+            <span><i class="comment">Tesla - - - - - - - Count: 006</i></span>
+            <span><i class="comment">Lanborghini - - - - Count: 000</i></span>
+          </code>
+          <p>They are very helpful if, for example, you want to create a digital clock, and want to prepend zero to all numbers involved as long as they are less than 10.</p>
+          <p>You can try appending or prepending emojis to a string with these methods. You'll be surprised with the results 😉.</p>
+        </div>
+        
+        <div class="features">
+          <h2>Object.getOwnPropertyDescriptors()</h2>
+          <p>This method takes in as a parameter an object for which to get all own property descriptors. Then it returns all the details (including getter and setter methods) for all the properties of a given object.</p>
+          <code>
+            <span>const obj = {</span>
+            <span><i class="indent">...</i>property1: 42</span>
+            <span>};</span><br>
+            <span>const discriptors = Object.getOwnPropertyDiscriptors(obj);</span><br>
+            <span>console.log(discriptors.property1.writable); <i class="comment">true</i></span><br>
+            <span>console.log(discriptors.property1.value); <i class="comment">42</i></span>
+          </code>
+          <p>Note that this feature is supported in the current versions of all major browsers except IE</p>
+        </div>
+        
+        <div class="features">
+          <h2>Trailing Commas</h2>
+          <p>This feature makes rearranging items simpler, because you don’t have to add commas if the last item changes its position. If you ask me, I don't see the point in it.</p>
+          <p>Some examples: </p>
+          <code>
+            <span>function about(name, age,) {</span>
+            <span><i class="indent">...</i>return `${name} is ${age} years old.`</span>
+            <span>};</span>
+            <span>console.log(about('Ade', 12)); <i class="comment">Ade is 12 years old</i></span>
+          </code>
+        </div>
+        
+        <div class="features">
+          <h2>Async/Await</h2>
+          <p>The async keyword, when put in front of a function, makes the function asynchronous and return a Promise. If you are wondering what callback hell is, I've included a video tutorial from allthingsjavascript. Check it out below: </p>
+          <iframe src="https://www.youtube.com/embed/QjbkyENTSPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>This feature relies on ES6/ES2015 promises. If you don't understand or know about promises, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">click here for more info</a>.</p>
+          <p>A trivial example: </p>
+          <code>
+            <span><i class="comment">When the async keyword is put in front of a function declaration, it returns a promise</i></span>
+            <span>async function hello() {</span>
+            <span><i class="indent">...</i>return "Hello";</span>
+            <span>};</span>
+            <span>hello();</span><br>
+            <span><i class="comment">You can use it with any type of function</i></span>
+            <span>let hello = async function() {</span>
+            <span><i class="indent">...</i>return "Hello"</span>
+            <span>};</span>
+            <span>hello();</span><br>
+            <span>let hello = async () => {</span>
+            <span><i class="indent">...</i>return "Hello"</span>
+            <span>};</span>
+            <span>hello();</span><br>
+            <span><i class="comment">They all do the same thing.</i></span>
+          </code>
+        </div>
+      </section>
+      
+      <section id="ecma-18">
+        <h2>ECMAScript <span class="year">2018</span></h2>
+        <div class="features">
+          <h2>Coming Soon</h2>
+          <p></p>
+        </div>
+      </section>
+      
+      <section id="ecma-19">
+        <h2>ECMAScript <span class="year">2019</span></h2>
+        <div class="features">
+          <h2>Coming Soon</h2>
+          <p></p>
+        </div>
+      </section>
+      
+      <section id="ecma-20">
+        <h2>ECMAScript <span class="year">2020</span></h2>
+        <div class="features">
+          <h2>Coming Soon</h2>
+          <p></p>
+        </div>
+      </section>
+    </article>
+  </div>
+  
+  <footer id="footer">
+    <p>Thaks to freecodecamp.org, MDN, tc39.es, w3schools and others for giving me motivation</p>
+  </footer>
+  
+  <div id="hovering-button">&and;</div>
+  <script src="main.js"></script>
+</body>
+</html>

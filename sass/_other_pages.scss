@@ -1,0 +1,121 @@
+
+.other-pages {
+  padding-top: $topbar-height;
+  header {
+    background: $secondary-color;
+    margin: 1.7em 0;
+    
+    h1 {
+      padding: 3em 1em;
+    }
+  }
+  
+  p {
+    padding: 0.8em;
+    line-height: 1.5em;
+    letter-spacing: 0.08em;
+  }
+  
+  .sidebar {
+    position: fixed;
+    
+    .logo {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    
+    .sidebar-list {
+      .bar-item {
+        padding: 1em;
+        border-bottom: 2px solid lighten($third-color, 30%);
+        
+        &:last-child {
+          border-bottom: 0;
+        }
+        
+        &:not(.active):hover {
+          background: lighten($third-color, 40%);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: map-get($break-points, md)) {
+    .sidebar {
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 75%;
+      z-index: 10;
+      
+      .sidebar-list {
+        .bar-item {
+          
+        }
+      }
+      
+      & + .overlay {
+        transition: .3s;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .3);
+        z-index: -1;
+        opacity: 0;
+      }
+      
+      &.open {
+        left: 0;
+        transition-delay: $general-delay;
+        
+        & + .overlay {
+          transition-delay: $general-delay;
+          z-index: 9;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: map-get($break-points, sm)) {
+    .sidebar {
+      width: 40%;
+    }
+  }
+  
+  @media (min-width: map-get($break-points, md)) {
+    display: grid;
+    grid-template-columns: 200px minmax(auto, 80ch) auto;
+    gap: 2em;
+    
+    > * {
+      grid-column: 2 / 3;
+    }
+    
+    .top-bar {
+      & > .button {
+        display: none;
+      }
+    }
+    
+    .sidebar {
+      @include box-shadow("2px 0 2px rgba(0, 0, 0, .2)");
+      height: calc(100% - #{$topbar-height} + 5px);
+      width: 200px;
+    }
+    
+    .overlay {
+      display: none;
+    }
+    
+    .footer {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+
+

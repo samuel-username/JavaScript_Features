@@ -1,0 +1,20 @@
+// Background
+$primary-color: #fff;
+$secondary-color: #f0db4f; // rgb(240, 219, 79);
+$third-color: #7f827a;
+
+// Text
+$primary-text-color: #323330; // rgb(50, 51, 48);
+$secondary-text-color: #fff;
+
+// Other
+$border-radius: 20px;
+$topbar-height: 55px;
+$break-points: (
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$general-delay: .2s;
+
